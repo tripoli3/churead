@@ -11,11 +11,11 @@ const Login = () => {
 
   //view
   return (
-    <div className="wrap ">
+    <div className="wrap flex flex-col justify-center items-center h-screen gap-1">
       <h1>
-        <img src="./images/logo.svg" alt="churead로고" />
+        <img src="./images/logo.svg" alt="churead로고" className="m-3" />
       </h1>
-      <h3 className="text-white text-[10px]">Churead에서 소통해보세요</h3>
+      <h3 className="text-white text-[px]">Churead에서 소통해보세요</h3>
       <InputField
         type={'text'}
         name={'email'}
@@ -26,7 +26,7 @@ const Login = () => {
         type={'text'}
         name={'password'}
         placeholder={'Password'}
-        className=" block rounded-lg border-black"
+        className=" block rounded-lg border-black "
       />
       <LoginButton text={'Login'} className="bg-white mx-auto" />
       <p className="text-slate-600 text-[10px]">
@@ -36,7 +36,10 @@ const Login = () => {
         </a>
       </p>
       <p className="text-slate-600 text-[10px]">or</p>
-      <LoginButton text={'Continue with Google'} />
+      <LoginButton
+        className="border block rounded-lg text-white"
+        text={'Continue with Google'}
+      />
       {/* <h2>Login</h2> */}
       {/* <button type="button" onClick={goToHome}>Home화면으로 이동</button> */}
       {/* <Link to={'/'} style={{ color: 'red' }} className="link">
