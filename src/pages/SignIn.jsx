@@ -1,10 +1,9 @@
 import React from 'react';
 import InputField from '../components/InputField';
 import LoginButton from '../components/LoginButton';
-import { Link } from 'react-router-dom';
+import CreateButton from '../components/CreateButton';
 
-
-const Login = () => {
+const SignIn = () => {
   //logic
   //   const history = useNavigate();
   //   const goToHome = () => {
@@ -21,15 +20,17 @@ const Login = () => {
         Churead에서 소통해보세요
       </h3>
       <form id="login-form" className="text-center flex flex-col gap-2">
-        <InputField type="text" field="email" />
+        <InputField type="text" field="name" />
+        <InputField type="email" field="email" />
         <InputField type="password" field="password" />
-        <LoginButton category="login" />
+        <CreateButton category="create" />
       </form>
       <div className="flex justify-center gap-1 py-6">
         <p className="text-slate-600">
           계정이 없으신가요?
-          <Link to={'/signin'}className="text-blue-400">가입하기</Link>
-            {/* <Link to={'/signin'}>가입하기</Link> */}
+          <a href="#" className="text-blue-700">
+            로그인
+          </a>
         </p>
       </div>
       <div>
@@ -47,4 +48,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignIn;
